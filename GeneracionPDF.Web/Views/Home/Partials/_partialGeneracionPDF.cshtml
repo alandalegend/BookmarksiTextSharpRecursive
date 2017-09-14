@@ -1,0 +1,54 @@
+﻿@model GeneracionPDF.Modelo.ViewModels.vmGeneracionPDF
+
+
+
+@if (Model.Transaccion != null)
+{
+
+    <script>
+        _notificacionJs("@Model.Transaccion.Mensaje", "@Model.Transaccion.Exitosa", "@Model.Transaccion.URL");
+    </script>
+}
+
+  <div class="form-horizontal">
+    @using (Ajax.BeginForm("GeneracionPDFAction", "Home", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        LoadingElementId="loader",
+        UpdateTargetId = "_partialRealizarDocumento",
+        //OnComplete = "$('#modalAddOrUpdateBadge').modal('hide');CargarJS();"
+    }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(x=>x.NombreLibroPDF, new { @class="control-label col-sm-2",  data_toggle="tooltip", title = ModelMetadata.FromLambdaExpression(model => model.NombreLibroPDF, ViewData).Description })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(x=>x.NombreLibroPDF, new { @class= "form-control", placeholder = ModelMetadata.FromLambdaExpression(model => model.NombreLibroPDF, ViewData).Description , data_toggle = "tooltip", title = ModelMetadata.FromLambdaExpression(model => model.NombreLibroPDF, ViewData).Description })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.RutaPDF, new { @class = "control-label col-sm-2", data_toggle = "tooltip", title = ModelMetadata.FromLambdaExpression(model => model.RutaPDF, ViewData).Description })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(x => x.RutaPDF, new { @class = "form-control", placeholder = ModelMetadata.FromLambdaExpression(model => model.RutaPDF, ViewData).Description, data_toggle = "tooltip", title = ModelMetadata.FromLambdaExpression(model => model.RutaPDF, ViewData).Description })
+            </div>
+        </div>
+        <div class="form-group">
+           <div class="col-lg-6 col-md-6 col-sm-6 col-sx-6 ">
+               @Html.LabelFor(x => x.Niveles, new { @class = "control-label col-sm-6", data_toggle = "tooltip", title = ModelMetadata.FromLambdaExpression(model => model.Niveles, ViewData).Description })
+               <div class="col-sm-6">
+                   @Html.TextBoxFor(x => x.Niveles, new { @class = "form-control",  type="number",  placeholder = ModelMetadata.FromLambdaExpression(model => model.Niveles, ViewData).Description, data_toggle = "tooltip", title = ModelMetadata.FromLambdaExpression(model => model.Niveles, ViewData).Description })
+               </div>
+           </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-sx-6 ">
+                @Html.LabelFor(x => x.SubNiveles, new { @class = "control-label col-sm-6", data_toggle = "tooltip", title = ModelMetadata.FromLambdaExpression(model => model.SubNiveles, ViewData).Description })
+                <div class="col-sm-6">
+                    @Html.TextBoxFor(x => x.SubNiveles, new { @class = "form-control", type = "number", placeholder = ModelMetadata.FromLambdaExpression(model => model.SubNiveles, ViewData).Description , data_toggle = "tooltip", title = ModelMetadata.FromLambdaExpression(model => model.SubNiveles, ViewData).Description })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+                <button type="submit" class="btn btn-primary col-lg-12 ">Generar PDFs</button>
+        </div>
+
+    }
+</div>

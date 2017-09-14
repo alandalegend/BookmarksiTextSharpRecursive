@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - daLegend </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <script src="~/Scripts/toastr.js"></script>
+    <link async href="~/Content/toastr.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="preloader" id="loader">
+        <div class="mensajeEspera">
+            <img src="http://dalegend.net/Content/Images/fox_jpg.png" width="350" />
+            <div class="loader"></div>
+            <br />
+            <span id="mensajeRandom"></span>
+        </div>
+    </div>
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Creación de PDFs y Bookmark", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+           
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <div class=" row text-center">
+        <a href="https://github.com/alanvanbuuren" target="_blank"  data-toggle="tooltip" title="sigueme en Github"><i class="fa fa-github fa-2x" ></i></a>
+        <a href="https://www.paypal.me/daLegend" target="_blank"  data-toggle="tooltip" title="¿Quieres donarme algo?"><i class="fa fa-paypal fa-3x"></i></a>
+        <a href="https://twitter.com/alan_van_buuren" target="_blank"  data-toggle="tooltip" title="Sigueme en Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="http://Titanes.club" target="_blank"   data-toggle="tooltip" title="Ve mi proyecto de eSports"><i class="fa fa-gamepad fa-2x"></i></a>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - <a href="http://dalegend.net" target="_blank" data-toggle="tooltip"  title="Ve mi sitio web">daLegend.net</a></p>
+        </footer>
+    </div>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        jQuery(window).load(function () {
+
+            var messages =
+                ["Generando tu PDF",
+                    "Wait... "];
+            var message = messages[Math.floor(Math.random() * messages.length)];
+
+            $('#mensajeRandom').text(message);
+
+            jQuery('.preloader').fadeOut();
+
+        });
+
+
+        function _notificacionJs(mensaje, exitosa, url) {
+            if (exitosa) {
+                toastr.success('<strong>daLegend</strong>: ' + mensaje + '');
+            }
+            else {
+                toastr.warning('<strong>daLegend</strong>: ' + mensaje);
+            }
+        }
+    </script>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

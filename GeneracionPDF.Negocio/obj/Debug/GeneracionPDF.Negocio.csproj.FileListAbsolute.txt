@@ -1,0 +1,10 @@
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\bin\Debug\GeneracionPDF.Negocio.dll
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\bin\Debug\GeneracionPDF.Negocio.pdb
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\bin\Debug\GeneracionPDF.Modelo.dll
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\bin\Debug\itextsharp.dll
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\bin\Debug\GeneracionPDF.Modelo.pdb
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\bin\Debug\itextsharp.xml
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\obj\Debug\GeneracionPDF.Negocio.csprojResolveAssemblyReference.cache
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\obj\Debug\GeneracionPDF.Negocio.csproj.CoreCompileInputs.cache
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\obj\Debug\GeneracionPDF.Negocio.dll
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Negocio\obj\Debug\GeneracionPDF.Negocio.pdb

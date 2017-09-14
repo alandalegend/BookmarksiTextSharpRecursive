@@ -1,0 +1,49 @@
+﻿@model GeneracionPDF.Modelo.ViewModels.vmGeneracionPDF
+
+@{
+    ViewBag.Title = "Genera tus PDFs";
+}
+
+<div class="jumbotron">
+    <h1>DaLegend.Net</h1>
+    <p class="lead">Genera tus archivos PDF's usando la librería de <code>itextSharp</code>, genera el <b>Bookmark</b>.</p>
+    <p>
+        Éste sistema se encarga de apoyarte a entender como generar documentos PDF con iTextSharp, podrás saber como aplicar los markups, ya que en mi investigación personal fue un dolor de cabeza, tal como lo quería
+        la magia de esto es que realizamos un <b>método recursivo</b>, el cual te ahorrará mucho tiempo de desarrollo.
+    </p>
+    <p class=" text-center ">
+
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Ver resultado</button>
+    </p>
+    
+</div>
+
+<div class="row" id="_partialRealizarDocumento">
+    @Html.Partial("Partials/_partialGeneracionPDF")
+</div>
+
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" >
+
+        <!-- Modal content-->
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Vista previa de tu resultado</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <img src="~/Content/captura.png" style="width:100%" />
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+</div>

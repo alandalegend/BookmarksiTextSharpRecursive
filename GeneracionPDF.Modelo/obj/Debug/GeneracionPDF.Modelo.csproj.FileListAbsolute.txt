@@ -1,0 +1,6 @@
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Modelo\bin\Debug\GeneracionPDF.Modelo.dll
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Modelo\bin\Debug\GeneracionPDF.Modelo.pdb
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Modelo\obj\Debug\GeneracionPDF.Modelo.csprojResolveAssemblyReference.cache
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Modelo\obj\Debug\GeneracionPDF.Modelo.csproj.CoreCompileInputs.cache
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Modelo\obj\Debug\GeneracionPDF.Modelo.dll
+D:\Desarrollo\Desarrollos Improvisados\GeneracionPDFsBookmark\GeneracionPDF\GeneracionPDF.Modelo\obj\Debug\GeneracionPDF.Modelo.pdb
